@@ -1,114 +1,51 @@
-# FUTURE_ML_03
-## Resume / Candidate Screening System using Machine Learning
+# 📄 Resume Screening & Ranking System using NLP
+Project Name
 
-### Machine Learning Internship Task 3  
-**By Future Interns**
+## Resume Screening & Ranking System
 
----
+## Objective
 
-## 📌 Project Overview
+This project builds a decision-support ML system to help HR professionals screen resumes efficiently.
+It cleans resumes, extracts key skills, compares them with a job description, ranks candidates, and identifies missing skills.
 
-Hiring teams receive hundreds of resumes for a single job role, making manual screening slow and inefficient.  
-This project builds a **Machine Learning-based Resume Screening System** that automatically analyzes resumes, compares them with job requirements, and ranks candidates based on their suitability.
+## Features
 
-The system helps recruiters shortlist candidates faster, identify missing skills, and improve hiring efficiency.
+Resume text cleaning & preprocessing
 
----
+Skill extraction using TF-IDF (NLP technique)
 
-## 🎯 Objective
+Job description parsing
 
-The main objectives of this project are:
+Resume-to-role similarity scoring (Cosine Similarity)
 
-- Read and process resume text data
-- Extract skills and important keywords
-- Compare resumes with a given job description
-- Rank candidates based on similarity scores
-- Identify missing skills in each resume
+Candidate ranking based on role fit
 
----
+Skill gap identification
 
-## 📁 Dataset Used
+Visualization of top candidates
 
-The project uses a **Resume Dataset** containing resumes categorized into different job roles such as:
+## Dataset
 
-- Accountant
-- Advocate
-- Agriculture
-- Arts
-- Engineering
-- HR
-- IT
-- Sales
-- Management
-- and more
+Input: resume.csv (contains unstructured resumes)
 
-Dataset contains:
+Output: Resume_Ranking_Sample.csv (sample of top 50 ranked candidates)
 
-- Resume text (Resume_str)
-- Resume category (Category)
-- Resume ID
+Full dataset is large. Sample file is provided to showcase project output.
 
----
+## How to Run
 
-## 🧠 Machine Learning / NLP Approach
+Open the Jupyter Notebook: Resume_Screening_Project.ipynb
 
-The following Natural Language Processing techniques were used:
+Run all cells in order.
 
-- Text preprocessing (cleaning, lowercasing, removing unwanted characters)
-- TF-IDF Vectorization to convert resume text into numerical features
-- Cosine Similarity to compare resumes with the job description
-- Candidate ranking based on similarity scores
-- Skill gap identification to find missing required skills
+The final ranked candidates are saved in Resume_Ranking_Sample.csv.
 
----
+## Future Improvements
 
-## 🛠 Tools & Technologies Used
+Weight important skills for better scoring
 
-- Python
-- Pandas – Data processing
-- NumPy – Numerical operations
-- Scikit-learn – TF-IDF and similarity computation
-- Matplotlib – Visualization
-- Jupyter Notebook – Development environment
+Use advanced NLP models like BERT for more accurate skill extraction
 
----
+Build a web interface for real-time resume screening
 
-## ⚙️ Project Workflow
-
-1. Load resume dataset
-2. Clean and preprocess resume text
-3. Define job description for the target role
-4. Convert resumes and job description into TF-IDF vectors
-5. Compute similarity scores between resumes and job description
-6. Rank candidates based on scores
-7. Identify missing skills for each candidate
-8. Display top-ranked candidates
-
----
-
-## 📊 Results
-
-The system successfully:
-
-- Ranked candidates according to job relevance
-- Highlighted resumes with the highest matching scores
-- Identified missing required skills for improvement
-
-This demonstrates how Machine Learning can assist recruiters in faster and smarter hiring decisions.
-
----
-
-## 🚀 Future Improvements
-
-- Automatic skill extraction using spaCy
-- Resume PDF parsing
-- Web interface for recruiter use
-- Multi-role job matching
-- Real-time resume upload screening
-
----
-
-## 📌 Conclusion
-
-This project demonstrates a practical real-world application of **Natural Language Processing and Machine Learning** in recruitment automation.  
-The system helps organizations reduce manual screening effort, improve hiring speed, and identify the most suitable candidates efficiently.
+Handle multiple job descriptions at once
